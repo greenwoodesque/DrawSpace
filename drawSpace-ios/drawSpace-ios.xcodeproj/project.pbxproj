@@ -12,7 +12,7 @@
 		17FEEF9524D0C93500AF6E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FEEF9424D0C93500AF6E89 /* Assets.xcassets */; };
 		17FEEF9824D0C93500AF6E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FEEF9624D0C93500AF6E89 /* LaunchScreen.storyboard */; };
 		17FEEFA124D0CB6B00AF6E89 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA024D0CB6B00AF6E89 /* Drawing.swift */; };
-		17FEEFA424D1D2F400AF6E89 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA324D1D2F300AF6E89 /* DrawingViewController.swift */; };
+		17FEEFA424D1D2F400AF6E89 /* DrawPadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA324D1D2F300AF6E89 /* DrawPadController.swift */; };
 		17FEEFA624D1D31C00AF6E89 /* ReplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */; };
 		17FEEFA824D1D36000AF6E89 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA724D1D36000AF6E89 /* ListViewController.swift */; };
 		17FEEFAA24D1D6CB00AF6E89 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */; };
@@ -23,6 +23,8 @@
 		17FEEFB424D2661500AF6E89 /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */; };
 		17FEEFB624D31A6500AF6E89 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB524D31A6500AF6E89 /* Helpers.swift */; };
 		17FEEFB824D31AAE00AF6E89 /* ReplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */; };
+		17FEEFBA24D3370900AF6E89 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB924D3370800AF6E89 /* ColorCollectionViewCell.swift */; };
+		17FEEFBC24D337C600AF6E89 /* ColorChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFBB24D337C600AF6E89 /* ColorChoices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,7 @@
 		17FEEF9724D0C93500AF6E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17FEEF9924D0C93500AF6E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17FEEFA024D0CB6B00AF6E89 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		17FEEFA324D1D2F300AF6E89 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		17FEEFA324D1D2F300AF6E89 /* DrawPadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPadController.swift; sourceTree = "<group>"; };
 		17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayViewController.swift; sourceTree = "<group>"; };
 		17FEEFA724D1D36000AF6E89 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
 		17FEEFB524D31A6500AF6E89 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayView.swift; sourceTree = "<group>"; };
+		17FEEFB924D3370800AF6E89 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		17FEEFBB24D337C600AF6E89 /* ColorChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChoices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,7 @@
 				17FEEF9424D0C93500AF6E89 /* Assets.xcassets */,
 				17FEEF9624D0C93500AF6E89 /* LaunchScreen.storyboard */,
 				17FEEF9924D0C93500AF6E89 /* Info.plist */,
-				17FEEFA324D1D2F300AF6E89 /* DrawingViewController.swift */,
+				17FEEFA324D1D2F300AF6E89 /* DrawPadController.swift */,
 				17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */,
 				17FEEFA724D1D36000AF6E89 /* ListViewController.swift */,
 				17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */,
@@ -92,6 +96,8 @@
 				17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */,
 				17FEEFB524D31A6500AF6E89 /* Helpers.swift */,
 				17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */,
+				17FEEFB924D3370800AF6E89 /* ColorCollectionViewCell.swift */,
+				17FEEFBB24D337C600AF6E89 /* ColorChoices.swift */,
 			);
 			path = "drawSpace-ios";
 			sourceTree = "<group>";
@@ -177,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FEEFA424D1D2F400AF6E89 /* DrawingViewController.swift in Sources */,
+				17FEEFBC24D337C600AF6E89 /* ColorChoices.swift in Sources */,
+				17FEEFA424D1D2F400AF6E89 /* DrawPadController.swift in Sources */,
+				17FEEFBA24D3370900AF6E89 /* ColorCollectionViewCell.swift in Sources */,
 				17FEEF8C24D0C93100AF6E89 /* AppDelegate.swift in Sources */,
 				17FEEFAA24D1D6CB00AF6E89 /* DrawView.swift in Sources */,
 				17FEEFA624D1D31C00AF6E89 /* ReplayViewController.swift in Sources */,
