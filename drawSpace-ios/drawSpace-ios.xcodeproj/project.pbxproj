@@ -16,6 +16,11 @@
 		17FEEFA624D1D31C00AF6E89 /* ReplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */; };
 		17FEEFA824D1D36000AF6E89 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA724D1D36000AF6E89 /* ListViewController.swift */; };
 		17FEEFAA24D1D6CB00AF6E89 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */; };
+		17FEEFAC24D1E12A00AF6E89 /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFAB24D1E12A00AF6E89 /* DrawingTableViewCell.swift */; };
+		17FEEFAE24D1EBBA00AF6E89 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */; };
+		17FEEFB024D1F8AF00AF6E89 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFAF24D1F8AF00AF6E89 /* Stroke.swift */; };
+		17FEEFB224D1FBF900AF6E89 /* DSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */; };
+		17FEEFB424D2661500AF6E89 /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayViewController.swift; sourceTree = "<group>"; };
 		17FEEFA724D1D36000AF6E89 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		17FEEFAB24D1E12A00AF6E89 /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
+		17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		17FEEFAF24D1F8AF00AF6E89 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDateFormatter.swift; sourceTree = "<group>"; };
+		17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,10 @@
 				17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */,
 				17FEEFA724D1D36000AF6E89 /* ListViewController.swift */,
 				17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */,
+				17FEEFAB24D1E12A00AF6E89 /* DrawingTableViewCell.swift */,
+				17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */,
+				17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */,
+				17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */,
 			);
 			path = "drawSpace-ios";
 			sourceTree = "<group>";
@@ -80,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				17FEEFA024D0CB6B00AF6E89 /* Drawing.swift */,
+				17FEEFAF24D1F8AF00AF6E89 /* Stroke.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FEEF9824D0C93500AF6E89 /* LaunchScreen.storyboard in Resources */,
+				17FEEFB424D2661500AF6E89 /* EmptyTableView.xib in Resources */,
 				17FEEF9524D0C93500AF6E89 /* Assets.xcassets in Resources */,
 				17FEEF9324D0C93100AF6E89 /* Main.storyboard in Resources */,
 			);
@@ -159,7 +175,11 @@
 				17FEEF8C24D0C93100AF6E89 /* AppDelegate.swift in Sources */,
 				17FEEFAA24D1D6CB00AF6E89 /* DrawView.swift in Sources */,
 				17FEEFA624D1D31C00AF6E89 /* ReplayViewController.swift in Sources */,
+				17FEEFB024D1F8AF00AF6E89 /* Stroke.swift in Sources */,
+				17FEEFAC24D1E12A00AF6E89 /* DrawingTableViewCell.swift in Sources */,
+				17FEEFAE24D1EBBA00AF6E89 /* Persistance.swift in Sources */,
 				17FEEFA824D1D36000AF6E89 /* ListViewController.swift in Sources */,
+				17FEEFB224D1FBF900AF6E89 /* DSDateFormatter.swift in Sources */,
 				17FEEFA124D0CB6B00AF6E89 /* Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

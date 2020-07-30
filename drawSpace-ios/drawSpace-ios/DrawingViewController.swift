@@ -10,6 +10,10 @@ import Foundation
 
 import UIKit
 
+protocol DrawPadDelegate: class {
+    func drawingSaved()
+}
+
 class DrawPadViewController: UIViewController {
     
     var strokes: [Stroke] = []
@@ -17,6 +21,7 @@ class DrawPadViewController: UIViewController {
     var lastPoint = CGPoint.zero
     var continuous = false
     let drawView = DrawView()
+    weak var delegate: DrawPadDelegate?
             
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,8 +54,6 @@ class DrawPadViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touchPoint = touches.first?.location(in: view) else {return}
-
         currentStroke?.endTime = Date()
         continuous = false
         if let current = currentStroke {
@@ -61,7 +64,17 @@ class DrawPadViewController: UIViewController {
     }
     
     @objc func saveDrawing() {
-        
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        let image = renderer.image { ctx in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        }
+        let aspectRatio = drawView.frame.height/drawView.frame.width
+        let drawing = Drawing(strokes: strokes, aspectRatio: aspectRatio)
+        do {
+            try Persistance.shared.save(drawing: drawing, image: image)
+            delegate?.drawingSaved()
+        } catch {
+            print("Error saving drawing.")
+        }
     }
-
 }

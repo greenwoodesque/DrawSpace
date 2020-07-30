@@ -12,16 +12,70 @@ class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var drawings: [Drawing] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let composeButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(launchDrawPad))
-            title = "Drawings!"
+            title = "DrawSpace"
             navigationItem.rightBarButtonItem = composeButton
+        tableView.separatorStyle = .none
+        tableView.dataSource = self
+        reload()
     }
 
+    func reload() {
+        Persistance.shared.getAllDrawings(success: { drawings in
+            self.drawings = drawings
+            tableView.reloadData()
+            if drawings.count == 0 {
+                tableView.backgroundView = UINib(nibName: "EmptyTableView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView
+                tableView.backgroundView?.isHidden = false
+            }
+        }, failure: { error in
+            print("ERROR RETRIEVING DRAWINGS: \(error)")
+        })
+    }
+    
     @objc func launchDrawPad() {
-        navigationController?.pushViewController(DrawPadViewController(), animated: true)
+        let vc = DrawPadViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
+extension ListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return drawings.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "drawingCell") as? DrawingTableViewCell else {
+            fatalError("wrong table cell")
+        }
+        cell.configure(drawing: drawings[indexPath.row], delegate: self)
+        return cell
+    }
+}
 
+extension ListViewController: DrawingCellDelegate {
+    func replay(drawing: Drawing) {
+        print("Replay drawing.")
+    }
+    
+    func delete(drawing: Drawing) {
+        do {
+            try Persistance.shared.delete(drawing: drawing)
+            reload()
+        } catch {
+            print("Remember to create error alert.")
+        }
+    }
+}
+
+extension ListViewController: DrawPadDelegate {
+    func drawingSaved() {
+        reload()
+        navigationController?.popViewController(animated: true)
+    }
+}

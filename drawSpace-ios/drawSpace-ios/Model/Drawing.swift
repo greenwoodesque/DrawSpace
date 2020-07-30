@@ -10,46 +10,26 @@ import Foundation
 import UIKit
 
 struct Drawing: Codable {
-    var id: UInt64
+    var id: String
     var strokes: [Stroke]
-}
-
-struct Stroke: Codable {
-    var points: [CGPoint]
-    var startTime: Date
-    var endTime: Date
-    var color: Color
+    var aspectRatio: CGFloat
     
-    struct Color: Codable {
-        var red: Int
-        var green: Int
-        var blue: Int
+    init(strokes: [Stroke], aspectRatio: CGFloat) {
+        self.strokes = strokes
+        self.aspectRatio = aspectRatio
+        id = UUID().uuidString
     }
 }
 
-extension Stroke {
-    func draw() {
-        guard !self.points.isEmpty else {return}
-        if self.points.count == 1 {
-            draw(from: self.points[0], to: self.points[0])
-        }
-        else {
-            for i in 1...self.points.count-1 {
-                draw(from: self.points[i-1], to: self.points[i])
-            }
-        }
+extension Drawing {
+    func startTime() -> Date? {
+        guard let firstStroke = strokes.first else { return nil }
+        return firstStroke.startTime
     }
     
-    private func draw(from: CGPoint, to: CGPoint) {
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
-        context.beginPath()
-        context.setLineWidth(5)
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.move(to: from)
-        context.addLine(to: to)
-        context.closePath()
-        context.drawPath(using: .fillStroke)
+    func totalTime() -> TimeInterval? {
+        guard let firstStroke = strokes.first,
+            let lastStroke = strokes.last else { return nil }
+        return lastStroke.endTime.timeIntervalSince(firstStroke.startTime)
     }
 }
