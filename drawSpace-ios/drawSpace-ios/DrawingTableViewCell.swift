@@ -38,7 +38,7 @@ class DrawingTableViewCell: UITableViewCell {
     }
     
     func getImage(drawing: Drawing) {
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .default).async {
             Persistance.shared.retrieveImage(forKey: drawing.id, completion: { image in
                 DispatchQueue.main.async { [weak self] in
                     self?.drawingImageView.image = image
@@ -73,6 +73,11 @@ class DrawingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        drawingImageView.image = nil
     }
 
 }

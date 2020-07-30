@@ -21,6 +21,8 @@
 		17FEEFB024D1F8AF00AF6E89 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFAF24D1F8AF00AF6E89 /* Stroke.swift */; };
 		17FEEFB224D1FBF900AF6E89 /* DSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */; };
 		17FEEFB424D2661500AF6E89 /* EmptyTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */; };
+		17FEEFB624D31A6500AF6E89 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB524D31A6500AF6E89 /* Helpers.swift */; };
+		17FEEFB824D31AAE00AF6E89 /* ReplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		17FEEFAF24D1F8AF00AF6E89 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
 		17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDateFormatter.swift; sourceTree = "<group>"; };
 		17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableView.xib; sourceTree = "<group>"; };
+		17FEEFB524D31A6500AF6E89 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */,
 				17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */,
 				17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */,
+				17FEEFB524D31A6500AF6E89 /* Helpers.swift */,
+				17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */,
 			);
 			path = "drawSpace-ios";
 			sourceTree = "<group>";
@@ -175,12 +181,14 @@
 				17FEEF8C24D0C93100AF6E89 /* AppDelegate.swift in Sources */,
 				17FEEFAA24D1D6CB00AF6E89 /* DrawView.swift in Sources */,
 				17FEEFA624D1D31C00AF6E89 /* ReplayViewController.swift in Sources */,
+				17FEEFB624D31A6500AF6E89 /* Helpers.swift in Sources */,
 				17FEEFB024D1F8AF00AF6E89 /* Stroke.swift in Sources */,
 				17FEEFAC24D1E12A00AF6E89 /* DrawingTableViewCell.swift in Sources */,
 				17FEEFAE24D1EBBA00AF6E89 /* Persistance.swift in Sources */,
 				17FEEFA824D1D36000AF6E89 /* ListViewController.swift in Sources */,
 				17FEEFB224D1FBF900AF6E89 /* DSDateFormatter.swift in Sources */,
 				17FEEFA124D0CB6B00AF6E89 /* Drawing.swift in Sources */,
+				17FEEFB824D31AAE00AF6E89 /* ReplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

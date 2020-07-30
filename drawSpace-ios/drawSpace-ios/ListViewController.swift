@@ -38,8 +38,7 @@ class ListViewController: UIViewController {
     }
     
     @objc func launchDrawPad() {
-        let vc = DrawPadViewController()
-        vc.delegate = self
+        let vc = DrawPadViewController.make(delegate: self)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -60,7 +59,8 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController: DrawingCellDelegate {
     func replay(drawing: Drawing) {
-        print("Replay drawing.")
+        let vc = ReplayViewController.make(strokes: drawing.strokes)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func delete(drawing: Drawing) {

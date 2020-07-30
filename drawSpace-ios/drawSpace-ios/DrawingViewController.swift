@@ -78,3 +78,14 @@ class DrawPadViewController: UIViewController {
         }
     }
 }
+
+extension DrawPadViewController {
+    static func make(delegate: DrawPadDelegate) -> Self {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: className) as? Self else {
+            fatalError("`\(className)` not found in storyboard.")
+        }
+        vc.delegate = delegate
+        return vc
+    }
+}

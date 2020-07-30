@@ -182,5 +182,20 @@
             </objects>
             <point key="canvasLocation" x="355" y="120"/>
         </scene>
+        <!--Replay View Controller-->
+        <scene sceneID="dN8-Io-cc2">
+            <objects>
+                <viewController storyboardIdentifier="ReplayViewController" id="4Er-KJ-xgk" customClass="ReplayViewController" customModule="drawSpace_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rHb-Ot-ArD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Mtj-TP-UhZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EY-Zk-vtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="117"/>
+        </scene>
     </scenes>
 </document>
