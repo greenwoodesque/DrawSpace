@@ -64,12 +64,17 @@ extension ListViewController: DrawingCellDelegate {
     }
     
     func delete(drawing: Drawing) {
-        do {
-            try Persistance.shared.delete(drawing: drawing)
-            reload()
-        } catch {
-            print("Remember to create error alert.")
-        }
+        let controller = UIAlertController(title: "Delete drawing?", message: "Are you sure you want to delete this drawing?", preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        controller.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            do {
+                try Persistance.shared.delete(drawing: drawing)
+                self.reload()
+            } catch {
+                print("Remember to create error alert.")
+            }
+        }))
+        present(controller, animated: true)
     }
 }
 

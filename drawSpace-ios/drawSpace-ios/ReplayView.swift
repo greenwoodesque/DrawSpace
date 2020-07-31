@@ -38,7 +38,7 @@ extension ReplayView {
     func replay(_ stroke: Stroke, delay: CFTimeInterval? = nil) {
         let shapeLayer = CAShapeLayer()
         let path = UIBezierPath(rect: CGRect(origin: stroke.points[0], size: .zero))
-        shapeLayer.lineWidth = 5
+        shapeLayer.lineWidth = stroke.width
         shapeLayer.strokeColor = stroke.getCGColor()
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.fillRule = .evenOdd

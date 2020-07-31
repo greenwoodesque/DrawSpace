@@ -39,7 +39,6 @@ class DrawPadViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(drawView)
         drawView.translatesAutoresizingMaskIntoConstraints = false
-//        drawView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         NSLayoutConstraint.activate([
             drawView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             drawView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
@@ -52,6 +51,8 @@ class DrawPadViewController: UIViewController {
         let squareSide = colorCollectionView.frame.height
         let layout = colorCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: squareSide, height: squareSide)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
         colorCollectionView.collectionViewLayout = layout
     }
     
@@ -62,7 +63,7 @@ class DrawPadViewController: UIViewController {
         var green: CGFloat = 0
         currentColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
         let color = Stroke.Color(red: red, green: green, blue: blue)
-        currentStroke = Stroke(points: [touchPoint], startTime: Date(), endTime: Date(), color: color)
+        currentStroke = Stroke(points: [touchPoint], startTime: Date(), endTime: Date(), color: color, width: Styles.defaultStrokeWidth)
         lastPoint = touchPoint
         drawView.currentStroke = currentStroke
     }
@@ -87,9 +88,9 @@ class DrawPadViewController: UIViewController {
     }
     
     @objc func saveDrawing() {
-        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        let renderer = UIGraphicsImageRenderer(size: drawView.bounds.size)
         let image = renderer.image { ctx in
-            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+            drawView.drawHierarchy(in: drawView.bounds, afterScreenUpdates: true)
         }
         let aspectRatio = drawView.frame.height/drawView.frame.width
         let drawing = Drawing(strokes: strokes, aspectRatio: aspectRatio)

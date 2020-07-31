@@ -176,13 +176,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-Kj-1Fe">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-Kj-1Fe">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="1B7-U0-nWn"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gn8-3G-ZKc">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gn8-3G-ZKc">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -190,7 +190,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="EnO-F3-hwo" customClass="ColorCollectionViewCell" customModule="drawSpace_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rJU-jt-5c6">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -217,8 +217,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MiS-Kj-1Fe" firstAttribute="leading" secondItem="Jor-aE-WzQ" secondAttribute="leading" id="04d-qZ-l7I"/>
-                            <constraint firstItem="Jor-aE-WzQ" firstAttribute="trailing" secondItem="MiS-Kj-1Fe" secondAttribute="trailing" id="XnO-IK-7lD"/>
+                            <constraint firstItem="MiS-Kj-1Fe" firstAttribute="leading" secondItem="Jor-aE-WzQ" secondAttribute="leading" priority="750" id="04d-qZ-l7I"/>
+                            <constraint firstItem="MiS-Kj-1Fe" firstAttribute="centerX" secondItem="NOp-CM-Khy" secondAttribute="centerX" id="5Gf-Tg-JeW"/>
+                            <constraint firstItem="Jor-aE-WzQ" firstAttribute="trailing" secondItem="MiS-Kj-1Fe" secondAttribute="trailing" priority="750" id="XnO-IK-7lD"/>
                             <constraint firstItem="Jor-aE-WzQ" firstAttribute="bottom" secondItem="MiS-Kj-1Fe" secondAttribute="bottom" id="dZG-4A-eBI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jor-aE-WzQ"/>
