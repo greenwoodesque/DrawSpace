@@ -61,6 +61,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1701307724D4763400B86565 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				17FEEFB524D31A6500AF6E89 /* Helpers.swift */,
+				17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1701307824D4767800B86565 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				17FEEFA324D1D2F300AF6E89 /* DrawPadController.swift */,
+				17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */,
+				17FEEFB924D3370800AF6E89 /* ColorCollectionViewCell.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		1701307924D476B200B86565 /* Replaying */ = {
+			isa = PBXGroup;
+			children = (
+				17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */,
+				17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */,
+			);
+			path = Replaying;
+			sourceTree = "<group>";
+		};
+		1701307A24D476C900B86565 /* Main Feed */ = {
+			isa = PBXGroup;
+			children = (
+				17FEEFA724D1D36000AF6E89 /* ListViewController.swift */,
+				17FEEFAB24D1E12A00AF6E89 /* DrawingTableViewCell.swift */,
+				17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */,
+			);
+			path = "Main Feed";
+			sourceTree = "<group>";
+		};
+		1701307B24D4774600B86565 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 		17FEEF7F24D0C93100AF6E89 = {
 			isa = PBXGroup;
 			children = (
@@ -80,24 +126,18 @@
 		17FEEF8A24D0C93100AF6E89 /* drawSpace-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1701307A24D476C900B86565 /* Main Feed */,
+				1701307824D4767800B86565 /* Drawing */,
+				1701307924D476B200B86565 /* Replaying */,
 				17FEEF9F24D0CB2C00AF6E89 /* Model */,
+				1701307B24D4774600B86565 /* Persistance */,
+				1701307724D4763400B86565 /* Helpers */,
+				17FEEFBB24D337C600AF6E89 /* Styles.swift */,
 				17FEEF8B24D0C93100AF6E89 /* AppDelegate.swift */,
 				17FEEF9124D0C93100AF6E89 /* Main.storyboard */,
 				17FEEF9424D0C93500AF6E89 /* Assets.xcassets */,
 				17FEEF9624D0C93500AF6E89 /* LaunchScreen.storyboard */,
 				17FEEF9924D0C93500AF6E89 /* Info.plist */,
-				17FEEFA324D1D2F300AF6E89 /* DrawPadController.swift */,
-				17FEEFA524D1D31C00AF6E89 /* ReplayViewController.swift */,
-				17FEEFA724D1D36000AF6E89 /* ListViewController.swift */,
-				17FEEFA924D1D6CB00AF6E89 /* DrawView.swift */,
-				17FEEFAB24D1E12A00AF6E89 /* DrawingTableViewCell.swift */,
-				17FEEFAD24D1EBB900AF6E89 /* Persistance.swift */,
-				17FEEFB124D1FBF900AF6E89 /* DSDateFormatter.swift */,
-				17FEEFB324D2661500AF6E89 /* EmptyTableView.xib */,
-				17FEEFB524D31A6500AF6E89 /* Helpers.swift */,
-				17FEEFB724D31AAE00AF6E89 /* ReplayView.swift */,
-				17FEEFB924D3370800AF6E89 /* ColorCollectionViewCell.swift */,
-				17FEEFBB24D337C600AF6E89 /* Styles.swift */,
 			);
 			path = "drawSpace-ios";
 			sourceTree = "<group>";
@@ -341,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "drawSpace-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -359,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "drawSpace-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
