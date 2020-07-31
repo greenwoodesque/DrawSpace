@@ -54,7 +54,7 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-WJ-wGT">
                                                                     <rect key="frame" x="0.0" y="0.0" width="299" height="471"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="200" id="uC1-sF-3st"/>
+                                                                        <constraint firstAttribute="height" priority="750" constant="471" id="xFe-cD-nDd"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU2-1r-Gyj">
@@ -173,7 +173,7 @@
                                             <outlet property="deleteButton" destination="Lnn-LW-J2x" id="VrH-ul-OFd"/>
                                             <outlet property="drawingImageView" destination="MgT-WJ-wGT" id="ZKt-Oa-024"/>
                                             <outlet property="drawingTimeLabel" destination="mCi-Bw-Scx" id="EZh-4r-J8l"/>
-                                            <outlet property="imageHeightConstraint" destination="uC1-sF-3st" id="1yb-wZ-SUP"/>
+                                            <outlet property="imageHeightConstraint" destination="xFe-cD-nDd" id="T1t-B7-alB"/>
                                             <outlet property="replayButton" destination="Ng6-bZ-rYn" id="Myz-VM-RZG"/>
                                             <outlet property="startedLabel" destination="Qfh-Dg-iNK" id="9o0-RG-uA0"/>
                                         </connections>

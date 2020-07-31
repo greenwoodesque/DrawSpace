@@ -32,8 +32,14 @@ class ListViewController: UIViewController {
             self.drawings = drawings
             tableView.reloadData()
         }, failure: { error in
-            print("ERROR RETRIEVING DRAWINGS: \(error)")
+            showErrorAlert(error)
         })
+    }
+    
+    func showErrorAlert(_ error: Error) {
+        let controller = UIAlertController(title: "Sorry! An error occured.", message: "This is what it was, technically: \(error). Please try again!", preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(controller, animated: true)
     }
     
     @objc func launchDrawPad() {
@@ -77,7 +83,7 @@ extension ListViewController: DrawingCellDelegate {
                 try Persistance.shared.delete(drawing: drawing)
                 self.reload()
             } catch {
-                print("Remember to create error alert.")
+                self.showErrorAlert(error)
             }
         }))
         present(controller, animated: true)
