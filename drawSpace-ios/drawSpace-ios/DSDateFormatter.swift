@@ -17,7 +17,7 @@ class DSDateFormatter {
         guard let date = drawing.startTime() else {
             return "NA"
         }
-        df.dateFormat =  "MMM dd, hh:mm a"
+        df.dateFormat =  "MMM d, h:mm a"
         df.timeZone = TimeZone.current
         return df.string(from: date)
     }

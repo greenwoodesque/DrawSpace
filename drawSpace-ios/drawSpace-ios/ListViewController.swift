@@ -13,7 +13,7 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var drawings: [Drawing] = []
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         let composeButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(launchDrawPad))
@@ -21,6 +21,9 @@ class ListViewController: UIViewController {
             navigationItem.rightBarButtonItem = composeButton
         tableView.separatorStyle = .none
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.backgroundView = UINib(nibName: "EmptyTableView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView
+        tableView.backgroundView?.isHidden = false
         reload()
     }
 
@@ -28,10 +31,6 @@ class ListViewController: UIViewController {
         Persistance.shared.getAllDrawings(success: { drawings in
             self.drawings = drawings
             tableView.reloadData()
-            if drawings.count == 0 {
-                tableView.backgroundView = UINib(nibName: "EmptyTableView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView
-                tableView.backgroundView?.isHidden = false
-            }
         }, failure: { error in
             print("ERROR RETRIEVING DRAWINGS: \(error)")
         })
@@ -54,6 +53,13 @@ extension ListViewController: UITableViewDataSource {
         }
         cell.configure(drawing: drawings[indexPath.row], delegate: self)
         return cell
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let imageWidth = tableView.frame.width - Styles.infoViewWidth
+        return imageWidth * drawings[indexPath.row].aspectRatio + 4
     }
 }
 

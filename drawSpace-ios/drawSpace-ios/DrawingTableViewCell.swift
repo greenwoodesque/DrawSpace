@@ -19,13 +19,19 @@ class DrawingTableViewCell: UITableViewCell {
     @IBOutlet weak var startedLabel: UILabel!
     @IBOutlet weak var drawingTimeLabel: UILabel!
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var replayButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
         
     var drawing: Drawing?
     weak var delegate: DrawingCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        for button in [replayButton, deleteButton] {
+            guard let button = button else {return}
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.systemTeal.cgColor
+        }
     }
 
     func configure(drawing: Drawing, delegate: DrawingCellDelegate) {
@@ -53,7 +59,7 @@ class DrawingTableViewCell: UITableViewCell {
         }
         let minutesString = time/60 > 1 ? "\(time/60) m " : ""
         let seconds = time.truncatingRemainder(dividingBy: 60)
-        let secondsString = time > 1 ? "\(round(seconds)) s" : "1 s"
+        let secondsString = time > 1 ? "\(Int((round(seconds)))) s" : "1 s"
         return minutesString + secondsString
     }
     
